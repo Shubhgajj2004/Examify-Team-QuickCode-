@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Student.SecureAnsSubmissionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/answerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_secure_exam_time" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/secureAnswerSubmitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/answerLayout"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Submit" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

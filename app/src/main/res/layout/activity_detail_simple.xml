@@ -9,6 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         >
 
     <RelativeLayout
@@ -164,17 +165,17 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/chapter_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="Chapters"
-        android:layout_below="@+id/showcase_detail"
-        android:layout_marginTop="80dp"
-        android:layout_marginHorizontal="20dp"
-        android:textSize="22sp"
-        android:fontFamily="@font/proxima_nova_bold"/>
+        <TextView
+            android:id="@+id/chapter_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/showcase_detail"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:text="Chapters"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
     <TextView
         android:id="@+id/chapter_detail2"
         android:layout_width="wrap_content"
@@ -288,7 +289,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginTop="5dp"
         android:text="Upload"
 
         />

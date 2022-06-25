@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Examify"
         tools:targetApi="31">
         <activity
+            android:name=".Student.SecureAnsSubmissionActivity"
+            android:exported="false" />
+        <activity
             android:name=".TeacherSection.MarksDetailActivity"
             android:exported="false" />
         <activity

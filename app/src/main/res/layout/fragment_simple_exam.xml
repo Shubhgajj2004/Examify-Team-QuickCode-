@@ -14,16 +14,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/Add_pdf_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+            <Button
+                android:id="@+id/Add_pdf_btn"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-        android:elevation="4dp"
-        android:layout_marginHorizontal="30dp"
-        android:text="Upload pdf"
-        style="@style/Widget.Material3.Button.OutlinedButton.Icon"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:elevation="1dp"
+                android:text="Upload pdf" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/subject"
@@ -117,7 +117,7 @@
         android:orientation="horizontal"
         android:layout_below="@+id/maxSimpleMarks"
         android:layout_marginTop="30dp"
-        android:layout_marginHorizontal="30dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_centerHorizontal="true">
         <TextView
             android:layout_width="50dp"

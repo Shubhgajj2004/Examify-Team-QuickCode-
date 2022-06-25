@@ -114,15 +114,16 @@
             android:layout_toRightOf="@id/img_Res"
             android:layout_marginLeft="30dp"
             android:layout_below="@+id/name_Res"/>
+
         <TextView
+            android:id="@+id/marksRes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Open Book"
             android:layout_alignParentRight="true"
-            android:textColor="#89D69F"
             android:fontFamily="@font/proxima_nova_reg"
-            android:textSize="16sp"
-            />
+            android:text="Open Book"
+            android:textColor="#89D69F"
+            android:textSize="16sp" />
 
     </RelativeLayout>
     </RelativeLayout>

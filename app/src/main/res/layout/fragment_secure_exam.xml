@@ -1,14 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TypeExam.SecureExamFragment">
+    tools:context=".TypeExam.SecureExamFragment"
+    android:id="@+id/mRlayout">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Button
+        android:id="@+id/addQuestionBtn"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Secure exam" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        android:layout_marginTop="30dp"
+        android:text="Add Question"
+        />
 
-</FrameLayout>
+    <LinearLayout
+
+        android:layout_below="@+id/addQuestionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lLayout"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp">
+
+        <include layout="@layout/add_edittext"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/secureExamName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:hint="Title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/secureExamName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/EID"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secureExamName"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:hint="Exam ID">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EID2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_below="@+id/EID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Upload"
+        />
+
+
+</RelativeLayout>

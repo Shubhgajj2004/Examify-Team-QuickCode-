@@ -21,5 +21,9 @@ public class FirebaseVarClass {
     public static final String STUDENTNAME = "studentNAME";
     public static final String FILE = "File";
     public static final String ANS = "Ans";
+    public static final String SECUREEXAM = "SecureExam";
+    public static final String EXAMID = "ExamID";
+    public static final String TEACHERID = "TeacherID";
+    public static final String TOTALQ = "TotalQ";
 
 }
