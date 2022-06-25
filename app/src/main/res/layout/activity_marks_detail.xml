@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeacherSection.MarksDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <View
+                android:id="@+id/showcase_detail2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/showcase_detail_round"
+                android:elevation="3dp"
+                android:outlineAmbientShadowColor="#616BFF"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/detail_self_img2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:elevation="5dp"
+                android:background="@drawable/round_image"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:outlineAmbientShadowColor="@color/purple_200"
+                app:cardElevation="3dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="80dp"
+                app:cardCornerRadius="14dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/relout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+
+                        <TextView
+                            android:id="@+id/idMarksTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proxima_nova_semibold"
+
+                            android:text="U21CS037"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+
+                        <TextView
+                            android:id="@+id/MarksTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/proxima_nova_reg"
+                            android:text="Not Reviewed"
+                            android:textColor="#3A3A3A"
+                            android:textSize="16sp" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/viewMarks2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#EBEBEB"
+                        android:layout_below="@+id/relout2"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/viewMarks2"
+                        android:paddingHorizontal="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgMarksTime"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/round_image"/>
+
+                        <TextView
+                            android:id="@+id/nameMarksTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shubh Gajjar"
+                            android:layout_toRightOf="@+id/imgMarksTime"
+                            android:layout_marginLeft="30dp"
+                            android:textSize="16sp"
+                            android:textColor="#858585"
+                            />
+
+
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/FileDetialMarksTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Files"
+                android:layout_below="@+id/showcase_detail2"
+                android:layout_marginTop="80dp"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="24sp"
+                android:fontFamily="@font/proxima_nova_bold"/>
+
+            <View
+                android:id="@+id/download_view2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/FileDetialMarksTime"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shadow_btn"
+                android:elevation="5dp"
+                android:outlineAmbientShadowColor="@color/purple_200" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/FileDetialMarksTime"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/icons_doc_64"
+                android:elevation="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/FileDetialMarksTime"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="39dp"
+                android:layout_toRightOf="@+id/view5"
+                android:elevation="15dp"
+                android:text="Download Submissions"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/giveMarks"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view5"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="30dp"
+                android:hint="Give Marks"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/giveMarks2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/giveFeedback"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/giveMarks"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:hint="Give Feedback"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/giveFeedback2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/sendBtnMarksTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send"
+                android:layout_below="@+id/giveFeedback"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="40dp"
+
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

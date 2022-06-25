@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:outlineAmbientShadowColor="@color/purple_200"
+    app:cardElevation="3dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+<!--    app:cardBackgroundColor="@color/purple_200"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/subject_Res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biology"
+
+        android:textSize="20sp"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:textColor="@color/black"
+        />
+
+        <TextView
+            android:id="@+id/date_Res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomorrow"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/subject_Res"
+            android:textColor="#878787"
+            android:textSize="16sp"
+            android:fontFamily="@font/greycliffcf_demibold"
+            />
+
+        <TextView
+            android:id="@+id/title_Res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laboratory 1"
+            android:textColor="#3A3A3A"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/proxima_nova_reg"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/time_Res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7:00 - 13:00"
+            android:fontFamily="@font/proxima_nova_reg"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/title_Res"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#878787"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#EBEBEB"
+        android:layout_below="@+id/rel1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_Res"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_image"/>
+
+        <TextView
+            android:id="@+id/name_Res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ronak Gohil"
+            android:layout_toRightOf="@+id/img_Res"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:textColor="#858585"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Examiner"
+            android:textColor="#E3B459"
+            android:textSize="14sp"
+            android:layout_toRightOf="@id/img_Res"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/name_Res"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Book"
+            android:layout_alignParentRight="true"
+            android:textColor="#89D69F"
+            android:fontFamily="@font/proxima_nova_reg"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:padding="30dp"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/collegeIdRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="U21CS037"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/isCheckedRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reviewed"
+            android:textColor="#E91E63"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

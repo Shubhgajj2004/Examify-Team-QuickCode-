@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TypeExam.SimpleExamFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/Add_pdf_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:elevation="4dp"
+        android:layout_marginHorizontal="30dp"
+        android:text="Upload pdf"
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/subject"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Add_pdf_btn"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:hint="@string/subject">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subject2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subject"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:hint="@string/title"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/chapter"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:hint="Chapters"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/chapter2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/maxSimpleMarks"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chapter"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:hint="Max Marks"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/maxSimpleMarks2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:id="@+id/timeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/maxSimpleMarks"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Starting Time"
+            android:gravity="center"
+
+            />
+        <Button
+            android:id="@+id/inTime"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            android:text="Pick"
+
+
+            />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Ending Time"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/finTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="Pick "
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+          />
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/dateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/timeLayout"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="40dp"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of examination"
+            android:textSize="17sp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/dateSimpleExam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Date"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/instructions_Simple_Exam"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/dateLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:hint="@string/title"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/instructions_Simple_Exam2"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:gravity="top"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <Button
+                android:id="@+id/Simple_submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/instructions_Simple_Exam"
+                android:text="Make Live"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Simple_submit_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/process_check"
+                android:layout_below="@+id/Simple_submit_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textSize="30dp"
+                android:textColor="#1EE34F"
+                android:visibility="invisible"
+                />
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

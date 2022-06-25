@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_nav"
+        android:enabled="true"
+        android:icon="@drawable/twotone_home_24"
+        android:title="@string/home_nav"/>
+    <item
+        android:id="@+id/history_nav"
+        android:enabled="true"
+        android:icon="@drawable/twotone_history_24"
+        android:title="@string/history_nav"/>
+
+    <item
+        android:id="@+id/teacher_nav"
+        android:enabled="true"
+        android:icon="@drawable/twotone_person_24"
+        android:title="@string/teacher_nav"/>
+
+    <item
+        android:id="@+id/secure_nav"
+        android:enabled="true"
+        android:icon="@drawable/twotone_verified_user_24"
+        android:title="@string/secure_nav"/>
+
+
+</menu>

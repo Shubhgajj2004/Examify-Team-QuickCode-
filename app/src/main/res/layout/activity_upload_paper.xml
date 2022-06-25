@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadPaperActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:orientation="horizontal"
+      android:layout_marginTop="90px"
+      >
+    <Button
+        android:id="@+id/chooseBtn"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Choose"/>
+
+    <Button
+        android:id="@+id/uplaodBtn"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+     android:layout_weight="1"
+        android:text="upload"/>
+  </LinearLayout>
+
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/uploadRes"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:layout_below="@+id/chooseBtn"
+      android:layout_marginHorizontal="40dp"
+      android:layout_marginTop="60dp"
+    />
+
+
+
+  </RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:outlineAmbientShadowColor="@color/purple_200"
+    app:cardElevation="3dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+    <!--    app:cardBackgroundColor="@color/purple_200"-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/titleTeacherRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laboratory 1"
+
+                android:textSize="20sp"
+                android:fontFamily="@font/proxima_nova_semibold"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/dateTeacherRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tomorrow"
+                android:layout_marginTop="7dp"
+                android:layout_below="@+id/titleTeacherRes"
+                android:textColor="#878787"
+                android:textSize="16sp"
+                android:fontFamily="@font/greycliffcf_demibold"
+                />
+
+            <TextView
+                android:id="@+id/statusTeacherRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/proxima_nova_reg"
+                android:text="Over"
+                android:textColor="#3A3A3A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/timeTeacherRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7:00 - 13:00"
+                android:fontFamily="@font/proxima_nova_reg"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/statusTeacherRes"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="#878787"
+                />
+
+        </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
