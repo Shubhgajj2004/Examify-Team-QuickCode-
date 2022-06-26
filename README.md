@@ -41,3 +41,7 @@
 ## 🚀 About Me
 Hi, I'm Shubh. I am studying computer science at SVNIT. Since I'm in the first year, I'm familiar with Java, C , Android, and Web platforms. I'm very passionate about computer science and enjoy learning new things every day.
 
+
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
