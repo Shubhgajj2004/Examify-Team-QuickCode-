@@ -31,6 +31,8 @@
 
 - the teacher can provide feedback to the student with grades
 
+-Student can't enter berfore or after exams.
+
 ## Tech Stack
 
 - JAVA
