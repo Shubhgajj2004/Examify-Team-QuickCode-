@@ -77,6 +77,7 @@ public class MarksDetailActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String ID = sharedPreferences.getString("ID", "false");
         String Key = sharedPreferences.getString("KEY", "false");
+        String teacherIMG = sharedPreferences.getString("IMG", "false");
 
 
         binding.sendBtnMarksTime.setOnClickListener(view -> {
@@ -95,6 +96,9 @@ public class MarksDetailActivity extends AppCompatActivity {
                         String marks = binding.giveMarks2.getText().toString();
                         reference.child(FirebaseVarClass.SUBMISSIONS).child(id).child(FirebaseVarClass.MARKS).setValue(marks + " / " + maxMarks);
                         reference.child(FirebaseVarClass.SUBMISSIONS).child(id).child(FirebaseVarClass.FEEDBACK).setValue(binding.giveFeedback2.getText().toString()).addOnSuccessListener(unused -> Toast.makeText(MarksDetailActivity.this, "Sent", Toast.LENGTH_SHORT).show());
+
+                        mDatabase.getReference().child(FirebaseVarClass.ALLEXAM).child(FirebaseVarClass.EXAM).child(Key)
+                                .child(FirebaseVarClass.SUBMISSIONS).child(id).child(FirebaseVarClass.MARKS).setValue(marks + " / " + maxMarks);
 
                     }
 
@@ -120,6 +124,10 @@ public class MarksDetailActivity extends AppCompatActivity {
             long reference = manager.enqueue(request);
 
         });
+
+
+        //Set teacher's img in the layout
+        Glide.with(getApplicationContext()).load(teacherIMG).into(binding.detailSelfImg2);
 
 
     }

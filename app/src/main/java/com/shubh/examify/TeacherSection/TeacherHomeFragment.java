@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -17,7 +18,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.shubh.examify.Adapters.TeacherAdapter;
+import com.shubh.examify.Adapters.TeacherSecureExamAdapter;
 import com.shubh.examify.FirebaseVar.FirebaseVarClass;
+import com.shubh.examify.Model.ModelTeacherSecureExam;
 import com.shubh.examify.Model.Model_Exam;
 import com.shubh.examify.databinding.FragmentTeacherHomeBinding;
 
@@ -33,8 +36,12 @@ public class TeacherHomeFragment extends Fragment {
     FragmentTeacherHomeBinding binding;
     ArrayList<Model_Exam> list = new ArrayList<>();
     ArrayList<Model_Exam> listKey = new ArrayList<>();
+
+    ArrayList<ModelTeacherSecureExam> list2 = new ArrayList<>();
+
     FirebaseDatabase database;
     TeacherAdapter adapter;
+    TeacherSecureExamAdapter adapter2;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -56,6 +63,11 @@ public class TeacherHomeFragment extends Fragment {
         binding.teacherRes.setAdapter(adapter);
         binding.teacherRes.setLayoutManager(new LinearLayoutManager(getContext()));
 
+
+        //Set Second Adpater with recyclerview
+        adapter2 = new TeacherSecureExamAdapter(list2 , getContext());
+        binding.secureTeacherRes.setAdapter(adapter2);
+        binding.secureTeacherRes.setLayoutManager(new LinearLayoutManager(getContext()));
 
         //fetch id of Teacher from local storage
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
@@ -82,6 +94,29 @@ public class TeacherHomeFragment extends Fragment {
 
 
                 adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+        //Retrieve data from a database about previously held Secure exams by particular faculty
+        database.getReference().child(FirebaseVarClass.TEACHERS).child(ID).child(FirebaseVarClass.SECUREEXAM).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                list2.clear();
+
+                for (DataSnapshot snapshot1 : snapshot.getChildren()) {
+                    ModelTeacherSecureExam adp2 = snapshot1.getValue(ModelTeacherSecureExam.class);
+                    adp2.setKey(snapshot1.getKey());
+                    list2.add(adp2);
+                }
+
+
+                adapter2.notifyDataSetChanged();
             }
 
             @Override

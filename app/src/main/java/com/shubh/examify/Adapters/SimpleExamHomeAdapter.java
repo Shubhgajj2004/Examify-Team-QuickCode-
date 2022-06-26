@@ -47,11 +47,11 @@ public class SimpleExamHomeAdapter extends RecyclerView.Adapter<SimpleExamHomeAd
 
         holder.subject.setText(adp.getSubject());
         holder.title.setText(adp.getTitle());
-//        holder.time.setText(adp.getInHour()+":"+adp.getInMin()+" - "+adp.getFinHour()+":"+adp.getFinMin());
         holder.time.setText( String.format(Locale.getDefault() , "%02d:%02d - %02d:%02d" , adp.getInHour() , adp.getInMin() ,adp.getFinHour() , adp.getFinMin() ));
-
         holder.date.setText(adp.getDate().toString());
+        holder.name.setText(adp.getName());
         Glide.with(context).load(adp.getImg()).into(holder.img);
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +69,7 @@ public class SimpleExamHomeAdapter extends RecyclerView.Adapter<SimpleExamHomeAd
                 intent.putExtra("inHour" , adp.getInHour());
                 intent.putExtra("inMinute" , adp.getInMin());
                 intent.putExtra("finHour" , adp.getFinHour());
-                intent.putExtra("finMinute" , adp.getInMin());
+                intent.putExtra("finMinute" , adp.getFinMin());
                 intent.putExtra("examinarID" , adp.getExaminarID());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -85,10 +85,11 @@ public class SimpleExamHomeAdapter extends RecyclerView.Adapter<SimpleExamHomeAd
         return list.size();
     }
 
+
     public static class MyHolder extends RecyclerView.ViewHolder
     {
         ImageView img;
-        TextView subject , time , date , title;
+        TextView subject , time , date , title , name;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -97,6 +98,7 @@ public class SimpleExamHomeAdapter extends RecyclerView.Adapter<SimpleExamHomeAd
             time = itemView.findViewById(R.id.time_Res);
             date = itemView.findViewById(R.id.date_Res);
             title = itemView.findViewById(R.id.title_Res);
+            name = itemView.findViewById(R.id.name_Res);
 
 
         }

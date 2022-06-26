@@ -21,18 +21,23 @@
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/activity_exam_maker.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/activity_marks_detail.xml" value="0.25" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/activity_secure_ans_submission.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/activity_teacher_exam_marks.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/activity_teacher_home.xml" value="0.2359375" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/activity_upload_paper.xml" value="0.25" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/add_edittext.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/custom_tab.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/fragment_history.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/fragment_home_.xml" value="0.264" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/fragment_secure.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/fragment_secure_exam.xml" value="0.2359375" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/fragment_simple_exam.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/fragment_teacher.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/fragment_teacher_home.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/item_detail_exam.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/item_home.xml" value="0.264" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/item_secure_exam_time.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/item_secure_teacher_home.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/item_teacher.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/layout/time_picker_layout.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/Examify/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.24895833333333334" />

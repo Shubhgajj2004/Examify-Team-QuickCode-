@@ -1,14 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashBoard.SecureFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/logo4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/proxima_nova"
+        android:text="CheatFree Examify"
+        android:textColor="@color/standard"
+        android:textSize="40sp" />
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ExamID"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo4"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="@string/exam_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ExamID2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        android:id="@+id/studentEnterInbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ExamID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shadow_btn"
+        android:text="@string/enter"
+        android:textSize="20sp"
+
+        />
+
+    <TextView
+        android:id="@+id/rule1"
+        android:layout_below="@+id/studentEnterInbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/proxima_nova"
+        android:text="Note:-- 1)You should only enter if you are ready"
+
+        android:textColor="#F44336"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/rule2"
+        android:layout_below="@+id/rule1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/proxima_nova"
+        android:text="2.)For cheating or any other reason, closing the answer submission page will automatically submit your answers, which will make your exam over. "
+        android:textColor="#F44336"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="16sp" />
+
+
+
+</RelativeLayout>

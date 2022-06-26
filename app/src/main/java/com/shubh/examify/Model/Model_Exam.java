@@ -2,7 +2,7 @@ package com.shubh.examify.Model;
 
 public class Model_Exam {
 
-    String Date ,Instructions ,Subject , Title ,PDFurl, img , Name , Chapter , isActive , examinarID , MaxMarks;
+    String Date ,Instructions ,Subject , Title ,PDFurl, img , Name , Chapter , isActive , examinarID , MaxMarks , Marks;
     int finHour , inHour , finMin , inMin;
 
 
@@ -41,6 +41,14 @@ public class Model_Exam {
         this.MaxMarks = MaxMarks;
     }
 
+
+    public String getMarks() {
+        return Marks;
+    }
+
+    public void setMarks(String marks) {
+        Marks = marks;
+    }
 
     public String getExaminarID() {
         return examinarID;

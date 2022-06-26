@@ -14,4 +14,6 @@
     <string name="float_des">Add Exam Content</string>
     <string name="subject">Subject</string>
     <string name="title">Title</string>
+    <string name="exam_id">Exam ID</string>
+    <string name="enter">Enter</string>
 </resources>

@@ -3,33 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="80dp"
     tools:context=".DashBoard.Home_Fragment">
 
     <TextView
         android:id="@+id/helloTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
-        android:text="Hello,"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/greycliffcf_demibold"
+        android:text="Hello,"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/nameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Shubh Gajjar"
         android:layout_below="@+id/helloTxt"
-        android:fontFamily="@font/greycliffcf_demibold"
-        android:textSize="23sp"
         android:layout_marginLeft="30dp"
-        android:textColor="@color/black"/>
+        android:fontFamily="@font/greycliffcf_demibold"
+        android:text="Shubh Gajjar"
+        android:textColor="@color/black"
+        android:textSize="23sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/SimpleRes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/nameTxt"
-        android:layout_marginHorizontal="20dp" android:layout_marginTop="30dp"/>
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp" />
 </RelativeLayout>

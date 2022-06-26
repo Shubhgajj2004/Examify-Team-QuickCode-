@@ -66,8 +66,6 @@ public class UploadPaperActivity extends AppCompatActivity {
 
 
 
-
-
                 if(fileURI != null) {
                     // Here we are initialising the progress dialog box
                     dialog = new ProgressDialog(UploadPaperActivity.this);
