@@ -12,6 +12,7 @@
 
 ## Features
 
+- Fully work over internet
 - Students can easily keep track of all upcoming exams, including their time, type, chapters, and date, by using an easy-to-use app.
 - The teacher can conduct two types of exam
 
