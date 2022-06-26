@@ -6,8 +6,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -77,13 +75,13 @@ public class SecureAnsSubmissionActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                 String NoOfQ =  snapshot.child(FirebaseVarClass.TOTALQ).getValue(String.class);
-                 noOfQ = Integer.parseInt(NoOfQ);
+                String NoOfQ = snapshot.child(FirebaseVarClass.TOTALQ).getValue(String.class);
+                noOfQ = Integer.parseInt(NoOfQ);
 
                 for (int i = 1; i <= noOfQ; i++) {
                     String Questions = snapshot.child("Q" + String.valueOf(i)).getValue(String.class);
                     teacherID = snapshot.child(FirebaseVarClass.TEACHERID).getValue(String.class);
-                    addView(Questions , i);
+                    addView(Questions, i);
                 }
             }
 
@@ -99,7 +97,7 @@ public class SecureAnsSubmissionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 addToFirebase();
-                Intent intent = new Intent(SecureAnsSubmissionActivity.this , DashBoardActivity.class);
+                Intent intent = new Intent(SecureAnsSubmissionActivity.this, DashBoardActivity.class);
                 startActivity(intent);
             }
         });
@@ -109,15 +107,14 @@ public class SecureAnsSubmissionActivity extends AppCompatActivity {
 
 
     //Add edittext as per teacher's need to make question
-    private void addView(String Q , int No) {
+    private void addView(String Q, int No) {
         final View aa = getLayoutInflater().inflate(R.layout.item_secure_exam_time, null, false);
 
         TextView question = (TextView) aa.findViewById(R.id.secureQuestion);
-        question.setText("Q"+No+") "+Q);
+        question.setText("Q" + No + ") " + Q);
 
         list.addView(aa);
     }
-
 
 
     //When student Minimise the app or press back button or
@@ -127,11 +124,10 @@ public class SecureAnsSubmissionActivity extends AppCompatActivity {
         super.onPause();
 
         addToFirebase();
-        Intent intent = new Intent(SecureAnsSubmissionActivity.this , DashBoardActivity.class);
+        Intent intent = new Intent(SecureAnsSubmissionActivity.this, DashBoardActivity.class);
         startActivity(intent);
 
     }
-
 
 
     //Upload Answers to Firebase
@@ -157,7 +153,7 @@ public class SecureAnsSubmissionActivity extends AppCompatActivity {
                                         .child(FirebaseVarClass.SECUREEXAM).child(ExamID).child(FirebaseVarClass.SUBMISSIONS)
                                         .child(studentID).child("StudentDetails").setValue(et.getText().toString());
 
-                            } else if(count>1 && count<=noOfQ+1) {
+                            } else if (count > 1 && count <= noOfQ + 1) {
                                 //for student node
                                 mDatabase.getReference().child(FirebaseVarClass.ALLEXAM)
                                         .child(FirebaseVarClass.SECUREEXAM).child(ExamID).child(FirebaseVarClass.SUBMISSIONS)

@@ -49,6 +49,7 @@ public class SimpleExamHomeAdapter extends RecyclerView.Adapter<SimpleExamHomeAd
         holder.title.setText(adp.getTitle());
         holder.time.setText( String.format(Locale.getDefault() , "%02d:%02d - %02d:%02d" , adp.getInHour() , adp.getInMin() ,adp.getFinHour() , adp.getFinMin() ));
         holder.date.setText(adp.getDate().toString());
+        holder.name.setText(adp.getName());
         Glide.with(context).load(adp.getImg()).into(holder.img);
 
 
@@ -88,7 +89,7 @@ public class SimpleExamHomeAdapter extends RecyclerView.Adapter<SimpleExamHomeAd
     public static class MyHolder extends RecyclerView.ViewHolder
     {
         ImageView img;
-        TextView subject , time , date , title;
+        TextView subject , time , date , title , name;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -97,6 +98,7 @@ public class SimpleExamHomeAdapter extends RecyclerView.Adapter<SimpleExamHomeAd
             time = itemView.findViewById(R.id.time_Res);
             date = itemView.findViewById(R.id.date_Res);
             title = itemView.findViewById(R.id.title_Res);
+            name = itemView.findViewById(R.id.name_Res);
 
 
         }

@@ -41,14 +41,13 @@
         android:layout_height="wrap_content"
         android:outlineAmbientShadowColor="@color/purple_200"
         app:cardElevation="3dp"
-        android:layout_marginHorizontal="40dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="80dp"
         app:cardCornerRadius="14dp"
         >
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
 
 
             <RelativeLayout
@@ -62,48 +61,44 @@
                     android:id="@+id/subject_Detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Biology"
-
-                    android:textSize="20sp"
                     android:fontFamily="@font/proxima_nova_semibold"
+
+                    android:text="Biology"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/date_Detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="07 June 2022"
-                    android:layout_marginTop="7dp"
                     android:layout_below="@+id/subject_Detail"
-                    android:textColor="#878787"
-                    android:textSize="16sp"
+                    android:layout_marginTop="7dp"
                     android:fontFamily="@font/greycliffcf_demibold"
-                    />
+                    android:text="07 June 2022"
+                    android:textColor="#878787"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/title_Detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Laboratory 1"
-                    android:textColor="#3A3A3A"
                     android:layout_alignParentRight="true"
                     android:fontFamily="@font/proxima_nova_reg"
-                    android:textSize="16sp"
-                    />
+                    android:text="Laboratory 1"
+                    android:textColor="#3A3A3A"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/time_Detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="7:00 - 13:00"
-                    android:fontFamily="@font/proxima_nova_reg"
-                    android:layout_alignParentRight="true"
                     android:layout_below="@+id/title_Detail"
-                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="@font/proxima_nova_reg"
+                    android:text="7:00 - 13:00"
                     android:textColor="#878787"
-                    />
+                    android:textSize="16sp" />
 
             </RelativeLayout>
 
@@ -279,21 +274,23 @@
 
 
 
-    </RelativeLayout>
 
-    </ScrollView>
 
     <Button
         android:id="@+id/uploadBtnSimpleExam"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/view5"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="9dp"
-        android:layout_marginTop="5dp"
+
+        android:layout_marginTop="45dp"
         android:text="Upload"
 
         />
+
+    </RelativeLayout>
+
+    </ScrollView>
 
 
 </RelativeLayout>

@@ -2,7 +2,7 @@ package com.shubh.examify.Model;
 
 public class Model_Teacher_Exam {
 
-    String studentID, Marks , studentNAME , Ans;
+    String studentID, Marks, studentNAME, Ans;
     String Key;
 
     public Model_Teacher_Exam() {
@@ -13,7 +13,7 @@ public class Model_Teacher_Exam {
         Key = key;
     }
 
-    public Model_Teacher_Exam(String studentID, String marks, String studentNAME , String Ans) {
+    public Model_Teacher_Exam(String studentID, String marks, String studentNAME, String Ans) {
         this.studentID = studentID;
         Marks = marks;
         this.studentNAME = studentNAME;

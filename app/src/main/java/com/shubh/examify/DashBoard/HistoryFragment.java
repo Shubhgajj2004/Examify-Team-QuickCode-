@@ -2,29 +2,23 @@ package com.shubh.examify.DashBoard;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.shubh.examify.Adapters.HistoryAdapter;
-import com.shubh.examify.Adapters.SimpleExamHomeAdapter;
 import com.shubh.examify.FirebaseVar.FirebaseVarClass;
 import com.shubh.examify.Model.Model_Exam;
-import com.shubh.examify.R;
 import com.shubh.examify.databinding.FragmentHistoryBinding;
-import com.shubh.examify.databinding.FragmentHomeBinding;
-import com.shubh.examify.databinding.FragmentTeacherHomeBinding;
 
 import java.util.ArrayList;
 
@@ -41,7 +35,8 @@ public class HistoryFragment extends Fragment {
     HistoryAdapter adapter;
 
 
-   FragmentHistoryBinding binding;
+    FragmentHistoryBinding binding;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -68,20 +63,18 @@ public class HistoryFragment extends Fragment {
 
                     //fetch id of student from local storage
                     SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-                    String studentID= sharedPreferences.getString("studentID", "false");
+                    String studentID = sharedPreferences.getString("studentID", "false");
 
                     String studentMarks = snapshot1.child(FirebaseVarClass.SUBMISSIONS).child(studentID).child(FirebaseVarClass.MARKS).getValue(String.class);
 
                     //check whether exam is over or not from database if over then and only then show.
-                    if(isActive.equals("Over"))
-                    {
+                    if (isActive.equals("Over")) {
                         Model_Exam adp = snapshot1.getValue(Model_Exam.class);
                         adp.setMarks(studentMarks);
                         list.add(adp);
                     }
 
                 }
-
 
 
                 adapter.notifyDataSetChanged();
