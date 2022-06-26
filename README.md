@@ -44,4 +44,4 @@ Hi, I'm Shubh. I am studying computer science at SVNIT. Since I'm in the first y
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/Shubhgajj2004/QuickCode/blob/main/home.png))
