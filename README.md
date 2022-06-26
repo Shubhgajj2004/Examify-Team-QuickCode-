@@ -46,3 +46,4 @@ Hi, I'm Shubh. I am studying computer science at SVNIT. Since I'm in the first y
 ## Screenshots
 
 ![alt Home page](https://github.com/Shubhgajj2004/QuickCode/blob/main/home.png)
+![alt Video link](https://youtu.be/8RB3cBDtYPs)
